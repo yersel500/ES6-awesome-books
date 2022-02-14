@@ -1,6 +1,7 @@
-import {ReplaceBooks} from '../modules/classes.js';
-import {inputTitle, inputAuthor, bookList, inputAdd, booksSection, menuList} from '../modules/selectors.js';
-import {handleNavigation} from '../modules/nav.js';
+import {ReplaceBooks} from './modules/classes.js';
+import {inputTitle, inputAuthor, bookList, inputAdd, booksSection, menuList, newDate} from './modules/selectors.js';
+import {handleNavigation} from './modules/nav.js';
+import {DateTime} from './node_modules/luxon/build/es6/luxon.js';
 
 const book2 = new ReplaceBooks();
 
@@ -67,6 +68,10 @@ window.onload = function storeData() {
     });
   }
 };
+
+//get the time
+const d = DateTime.now();
+newDate.innerHTML = d;
 
 
 

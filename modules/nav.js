@@ -1,9 +1,5 @@
 import {bookshelf, addBook, contactInfo, newDate, menuList} from '../modules/selectors.js';
 
-// Setting the date
-const d = new Date();
-newDate.innerHTML = d.toUTCString();
-
  export function handleNavigation(index) {
   if (menuList[index].innerHTML === 'List') {
     bookshelf.style.display = 'flex';
