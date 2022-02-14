@@ -1,7 +1,9 @@
-import {ReplaceBooks} from './modules/classes.js';
-import {inputTitle, inputAuthor, bookList, inputAdd, booksSection, menuList, newDate} from './modules/selectors.js';
-import {handleNavigation} from './modules/nav.js';
-import {DateTime} from './node_modules/luxon/build/es6/luxon.js';
+import ReplaceBooks from './modules/classes.js';
+import {
+  inputTitle, inputAuthor, bookList, inputAdd, booksSection, menuList, newDate,
+} from './modules/selectors.js';
+import handleNavigation from './modules/nav.js';
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 
 const book2 = new ReplaceBooks();
 
@@ -19,7 +21,6 @@ inputAdd.addEventListener('click', () => {
   console.log(listBooks);
 });
 
-
 // Removing books
 bookList.addEventListener('click', (e) => {
   console.log(listBooks);
@@ -35,7 +36,6 @@ menuList.forEach((element, index) => {
     handleNavigation(index);
   });
 });
-
 
 // Data is preserved in localStorage
 window.onload = function storeData() {
@@ -69,9 +69,6 @@ window.onload = function storeData() {
   }
 };
 
-//get the time
+// get the time
 const d = DateTime.now();
 newDate.innerHTML = d;
-
-
-

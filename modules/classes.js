@@ -1,8 +1,10 @@
-import {inputTitle, inputAuthor, bookList, booksSection, inputAdd} from '../modules/selectors.js'
+import {
+  booksSection,
+} from './selectors.js';
 
 // import {listBooks} from '../index.js';
 
-export class ReplaceBooks {
+export default class ReplaceBooks {
   replacebooks(title, author, id) {
     this.title = title;
     this.author = author;
@@ -13,7 +15,7 @@ export class ReplaceBooks {
     const template = `
     <div id="book${details.id}">
         <p id="book${details.id}-details">${details.title} by ${details.author}</p>
-        <button id="book${details.id}-remove" data-id='${details.id}' class='remove-book'>Remove</button>
+        <button id="book${details.id}-remove" data-id='${details.id} data-new='${this.id}' class='remove-book'>Remove</button>
     </div>
     `;
     return template;

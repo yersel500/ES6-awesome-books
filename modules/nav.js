@@ -1,6 +1,8 @@
-import {bookshelf, addBook, contactInfo, newDate, menuList} from '../modules/selectors.js';
+import {
+  bookshelf, addBook, contactInfo, menuList,
+} from './selectors.js';
 
- export function handleNavigation(index) {
+export default function handleNavigation(index) {
   if (menuList[index].innerHTML === 'List') {
     bookshelf.style.display = 'flex';
     addBook.style.display = 'none';
@@ -17,4 +19,3 @@ import {bookshelf, addBook, contactInfo, newDate, menuList} from '../modules/sel
     contactInfo.style.display = 'flex';
   }
 }
-

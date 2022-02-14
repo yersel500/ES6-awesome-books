@@ -6,7 +6,7 @@ export const booksSection = document.querySelector('#booklist');
 // Line 90
 export const bookList = document.querySelector('#booklist');
 
-//Collecting info for navbar
+// Collecting info for navbar
 export const bookshelf = document.getElementById('bookshelf');
 export const addBook = document.getElementById('add-book');
 export const contactInfo = document.getElementById('contact-info');
