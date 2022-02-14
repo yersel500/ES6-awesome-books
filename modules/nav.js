@@ -1,15 +1,10 @@
-const bookshelf = document.getElementById('bookshelf');
-const addBook = document.getElementById('add-book');
-const contactInfo = document.getElementById('contact-info');
-const newDate = document.querySelector('.date');
-
-const menuList = document.querySelectorAll('.header-links');
+import {bookshelf, addBook, contactInfo, newDate, menuList} from '../modules/selectors.js';
 
 // Setting the date
 const d = new Date();
 newDate.innerHTML = d.toUTCString();
 
-function handleNavigation(index) {
+ export function handleNavigation(index) {
   if (menuList[index].innerHTML === 'List') {
     bookshelf.style.display = 'flex';
     addBook.style.display = 'none';
@@ -27,8 +22,3 @@ function handleNavigation(index) {
   }
 }
 
-menuList.forEach((element, index) => {
-  element.addEventListener('click', () => {
-    handleNavigation(index);
-  });
-});
